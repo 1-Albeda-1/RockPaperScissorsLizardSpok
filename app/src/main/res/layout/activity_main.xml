@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/UserImage"
+        android:layout_width="101dp"
+        android:layout_height="102dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="145dp"
+        android:layout_marginEnd="139dp"
+        app:layout_constraintEnd_toStartOf="@+id/ComputerImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/ComputerImage"
+        android:layout_width="101dp"
+        android:layout_height="102dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="145dp"
+        android:layout_marginEnd="34dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/UserImage"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TableLayout
+        android:id="@+id/tableLayout2"
+        android:layout_width="407dp"
+        android:layout_height="142dp"
+        android:layout_marginTop="133dp"
+        android:layout_marginBottom="209dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UserImage">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnRock"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40px"
+                android:enabled="false"
+                android:text="Камень" />
+
+            <Button
+                android:id="@+id/btnScissors"
+                android:layout_width="146dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="0dp"
+                android:enabled="false"
+                android:text="Ножницы" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnPaper"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="40px"
+                android:enabled="false"
+                android:text="Бумага" />
+
+            <Button
+                android:id="@+id/btnLizard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:enabled="false"
+                android:text="Ящерица" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnSpok"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:enabled="false"
+                android:text="Спок"
+                android:textAlignment="gravity" />
+        </TableRow>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="385dp"
+        android:layout_height="142dp"
+        android:orientation="vertical"
+        app:flow_horizontalAlign="center"
+        app:flow_verticalAlign="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout2">
+
+        <Button
+            android:id="@+id/btnRepeat"
+            android:layout_width="383dp"
+            android:layout_height="48dp"
+            android:text="Повторить"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/btnStop"
+            android:layout_width="383dp"
+            android:layout_height="48dp"
+            android:enabled="false"
+            android:text="Завершить игру" />
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="383dp"
+            android:layout_height="48dp"
+            android:text="Старт" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="378dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UserImage">
+
+        <TextView
+            android:id="@+id/txtChoise"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Сделайте ход"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/btnStatistics"
+            android:layout_width="374dp"
+            android:layout_height="48dp"
+            android:text="Показать счет"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="419dp"
+        android:layout_height="145dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="32dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <ImageView
+        android:id="@+id/RulesImage"
+        android:layout_width="144dp"
+        android:layout_height="134dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="133dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toStartOf="@+id/ComputerImage"
+        app:layout_constraintStart_toEndOf="@+id/UserImage"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/rules" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
